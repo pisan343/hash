@@ -22,6 +22,10 @@ public:
 };
 
 namespace std {
+
+// In C++, the hash class is default constructible function class
+// (functor) that provides the default hash function used by STL.
+// https://www.geeksforgeeks.org/stdhash-class-in-c-stl/
 template <> struct hash<A> {
   size_t operator()(const A &p) const {
     // return hash<string>()(p.name);
